@@ -35,22 +35,6 @@ def find_entries3(entry_sum: int, input_list: List[int]) \
         tmp_result = find_entries(entry_sum - inputs[i], inputs[i+1:])
         if tmp_result is not None:
             return inputs[i], tmp_result[0], tmp_result[1]
-        # if inputs[k] > entry_sum:
-        #     continue
-
-        # for j in range(k - 1, 0, -1):
-        #     if inputs[j] + inputs[k] > entry_sum:
-        #         continue
-
-        #     for i in range(j - 1, -1, -1):
-        #         s = inputs[i] + inputs[j] + inputs[k]
-        #         if s < entry_sum:
-        #             break
-        #         elif s == entry_sum:
-        #             return (inputs[i], inputs[j], inputs[k])
-
-        #     if i == j - 1:
-        #         break
     return None
 
 
